@@ -84,7 +84,7 @@ dataSource:
     password: password
 
 quartz:
-    autoStartup: true
+    autoStartup: false
     jdbcStore: true
     scheduler:
         instanceName: 'staff_scheduler'
@@ -96,7 +96,7 @@ quartz:
     jobStore:
         misfireThreshold: 60000
         class: 'org.quartz.impl.jdbcjobstore.JobStoreTX'
-        driverDelegateClass: 'org.quartz.impl.jdbcjobstore.StdJDBCDelegate'
+        driverDelegateClass: 'org.quartz.impl.jdbcjobstore.PostgreSQLDelegate'
         useProperties: false
         dataSource: 'development'
         tablePrefix: 'QRTZ_'
